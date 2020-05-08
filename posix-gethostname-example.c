@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 
-    subRetInt = gethostname(nameBuf, sizeof(nameBuf));
+    subRetInt = gethostname(nameBuf, nameBufLen);
     if (subRetInt != 0) {
         // This is usually not possible.
         perror("gethostname");
