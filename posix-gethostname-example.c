@@ -27,8 +27,8 @@ int main(int argc, char *argv[]) {
 #if defined HOST_NAME_MAX
     char nameBuf[HOST_NAME_MAX + 1];
     size_t nameBufLen = sizeof(nameBuf);
-#elif
-    char nameBuf = NULL;
+#else
+    char *nameBuf = NULL;
     size_t nameBufLen = 0;
 #endif
 
